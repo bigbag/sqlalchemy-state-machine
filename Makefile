@@ -16,7 +16,6 @@ lint:
 	@exec black sqlalchemy_state_machine tests
 	@echo "Run flake"
 	@exec flake8 sqlalchemy_state_machine tests
-	@exec vulture sqlalchemy_state_machine
 	@echo "Run bandit"
 	@exec bandit -r sqlalchemy_state_machine/*
 	@echo "Run mypy"

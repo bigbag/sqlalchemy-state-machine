@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-from setuptools import find_packages, setup
-
 from pp_common.version import __version__
+from setuptools import find_packages, setup
 
 
 def get_requirements(extra_name):
