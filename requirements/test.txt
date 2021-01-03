@@ -1,10 +1,5 @@
 asynctest
-bandit
-black
-flake8
-isort
 mock
-mypy
 pre-commit
 pytest
 pytest-asyncio

@@ -30,7 +30,7 @@ setup(
     url="https://github.com/bigbag/sqlalchemy-state-machine",
     platforms=CLASSIFIERS,
     install_requires=get_requirements("prod"),
-    extras_require={"tests": get_requirements("tests")},
+    extras_require={"tests": get_requirements("tests"), "linters": get_requirements("linters")},
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,

@@ -1,0 +1,26 @@
+name: Lint
+
+on:
+  push:
+
+jobs:
+  lint:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Install dependencies
+      run: |
+        pwd
+        ls
+        python -m pip install --upgrade pip
+        pip install --no-cache-dir -r requirements/prod.txt
+        pip install --no-cache-dir -r requirements/linters.txt
+    - name: Lint
+      run: |
+        make lint
