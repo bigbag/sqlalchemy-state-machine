@@ -20,10 +20,6 @@ class StateConfig:
 class StateMixin:
     state_config: StateConfig
 
-    @declared_attr
-    def __tablename__(cls):
-        return cls.__name__.lower()
-
     @property
     def state(self):
         return getattr(self, self.state_config.status_attribute)
