@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from typing import Any, List, Optional
 
-from sqlalchemy.ext.declarative import declared_attr
 from transitions import Machine
 
 
@@ -19,10 +18,6 @@ class StateConfig:
 @dataclass
 class StateMixin:
     state_config: StateConfig
-
-    @declared_attr
-    def __tablename__(cls):
-        return cls.__name__.lower()
 
     @property
     def state(self):

@@ -1,0 +1,6 @@
+[run]
+omit=tests/*, sqlalchemy_state_machine/version.py
+
+[report]
+exclude_lines =
+    if __name__ == .__main__.:
