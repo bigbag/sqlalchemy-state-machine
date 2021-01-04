@@ -1,7 +1,7 @@
 import pytest
 from transitions import MachineError
 
-from tests.fixtures import Event, NEW, SENT, FAILED
+from tests.fixtures import FAILED, NEW, SENT, Event
 
 
 def test_set_sent(prepare_db):

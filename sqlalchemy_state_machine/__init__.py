@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from typing import Any, List, Optional
 
-from sqlalchemy.ext.declarative import declared_attr
 from transitions import Machine
 
 
