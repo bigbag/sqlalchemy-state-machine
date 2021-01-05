@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 from setuptools import find_packages, setup
+from importlib.machinery import SourceFileLoader
 
-from sqlalchemy_state_machine.version import __version__
+version = SourceFileLoader("version", "sqlalchemy_state_machine/version.py").load_module()
 
 
 def get_requirements(extra_name):
@@ -29,7 +30,7 @@ setup(
     author_email="pavel.liashkov@protonmail.com",
     name="sqlalchemy-state-machine",
     description="Helper for add transitions functionality in sqlalchemy",
-    version=__version__,
+    version=str(version.VERSION),
     url="https://github.com/bigbag/sqlalchemy-state-machine",
     platforms=CLASSIFIERS,
     install_requires=get_requirements("prod"),
