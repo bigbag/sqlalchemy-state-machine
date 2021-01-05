@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-from pp_common.version import __version__
 from setuptools import find_packages, setup
+
+from sqlalchemy_state_machine.version import __version__
 
 
 def get_requirements(extra_name):
@@ -12,7 +13,9 @@ def get_requirements(extra_name):
 CLASSIFIERS = [
     "Development Status :: 3 - Beta",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "Operating System :: OS Independent",
     "Topic :: System :: Networking",
     "Topic :: Software Development",
@@ -29,8 +32,7 @@ setup(
     version=__version__,
     url="https://github.com/bigbag/sqlalchemy-state-machine",
     platforms=CLASSIFIERS,
-    install_requires=get_requirements("prod"),
-    extras_require={"tests": get_requirements("tests"), "linters": get_requirements("linters")},
+    install_requires=["sqlalchemy", "transitions"],
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,

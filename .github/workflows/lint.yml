@@ -16,7 +16,7 @@ jobs:
         python-version: '3.8'
     - name: Install dependencies
       run: |
-        pip install --no-cache-dir -r requirements/prod.txt
+        pip install --no-cache-dir -e .
         pip install --no-cache-dir -r requirements/linters.txt
     - name: Lint
       run: |

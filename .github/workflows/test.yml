@@ -16,8 +16,8 @@ jobs:
         python-version: '3.8'
     - name: Install dependencies
       run: |
-        pip install --no-cache-dir -r requirements/prod.txt
-        pip install --no-cache-dir -r requirements/test.txt
+        pip install --no-cache-dir -e .
+        pip install --no-cache-dir -r requirements/tests.txt
     - name: Run tests
       run: |
         make test
