@@ -32,7 +32,7 @@ setup(
     version=__version__,
     url="https://github.com/bigbag/sqlalchemy-state-machine",
     platforms=CLASSIFIERS,
-    install_requires=["sqlalchemy", "transitions"],
+    install_requires=get_requirements("prod"),
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
