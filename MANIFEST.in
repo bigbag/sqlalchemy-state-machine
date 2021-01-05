@@ -3,5 +3,6 @@ include README.md
 include setup.py
 
 recursive-include sqlalchemy_state_machine *.py
+recursive-exclude tests *
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
