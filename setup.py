@@ -5,12 +5,6 @@ from importlib.machinery import SourceFileLoader
 version = SourceFileLoader("version", "sqlalchemy_state_machine/version.py").load_module()
 
 
-def get_requirements(extra_name):
-    requirements_path = f"requirements/{extra_name}.txt"
-    with open(requirements_path, "r") as f:
-        return [x.strip() for x in f.readlines()]
-
-
 CLASSIFIERS = [
     "Development Status :: 3 - Beta",
     "Programming Language :: Python",
@@ -33,7 +27,7 @@ setup(
     version=str(version.VERSION),
     url="https://github.com/bigbag/sqlalchemy-state-machine",
     platforms=CLASSIFIERS,
-    install_requires=get_requirements("prod"),
+    install_requires=["sqlalchemy", "transitions"],
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
