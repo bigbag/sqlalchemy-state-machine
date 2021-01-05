@@ -1,7 +1,8 @@
 name: Upload Python Package
 
 on:
-  tags:
+  create:
+    tags:
 
 jobs:
   deploy:
