@@ -1,0 +1,7 @@
+pre-commit
+pytest
+pytest-asyncio
+pytest-cov
+pytest-freezegun
+pytest-sugar
+pytest-xdist
