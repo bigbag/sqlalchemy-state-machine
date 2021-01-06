@@ -27,7 +27,7 @@ setup(
     version=str(version.VERSION),
     url="https://github.com/bigbag/sqlalchemy-state-machine",
     platforms=CLASSIFIERS,
-    install_requires=["sqlalchemy", "transitions"],
+    install_requires=["SQLAlchemy==1.3.22", "transitions==0.8.6"],
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
