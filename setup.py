@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-from setuptools import find_packages, setup
 from importlib.machinery import SourceFileLoader
+
+from setuptools import find_packages, setup
 
 version = SourceFileLoader("version", "sqlalchemy_state_machine/version.py").load_module()
 

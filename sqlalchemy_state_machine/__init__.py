@@ -1,18 +1,18 @@
+import typing as t
 from dataclasses import dataclass
-from typing import Any, List, Optional
 
 from transitions import Machine
 
 
 @dataclass
 class StateConfig:
-    initial: Any
-    states: List[Any]
-    transitions: Optional[List[List[Any]]]
-    state_attribute: Optional[str] = "state"
-    status_attribute: Optional[str] = "status"
-    machine_name: Optional[str] = "machine"
-    after_state_change: Optional[Any] = None
+    initial: t.Any
+    states: t.List[t.Any]
+    transitions: t.Optional[t.List[t.List[t.Any]]]
+    state_attribute: t.Optional[str] = "state"
+    status_attribute: t.Optional[str] = "status"
+    machine_name: t.Optional[str] = "machine"
+    after_state_change: t.Optional[t.Any] = None
 
 
 @dataclass
