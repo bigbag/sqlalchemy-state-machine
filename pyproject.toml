@@ -1,6 +1,6 @@
 [tool.black]
 line-length = 100
-target-version = ['py37']
+target-version = ['py38']
 include = '\.pyi?$'
 
 [tool.vulture]
@@ -15,5 +15,4 @@ indent='    '
 sections = ['FUTURE','STDLIB','THIRDPARTY','FIRSTPARTY','LOCALPROJECT','LOCALFOLDER']
 default_section = 'THIRDPARTY'
 known_standard_library = []
-known_first_party = ['sqlalchemy_state_machine']
-known_localproject = ['app','tests']
+known_localproject = ['sqlalchemy_state_machine','tests']
