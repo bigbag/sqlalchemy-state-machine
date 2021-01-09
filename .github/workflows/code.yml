@@ -5,7 +5,7 @@ on:
 
 jobs:
   code_quality:
-    name: Lint code
+    name: Check code quality
     runs-on: ubuntu-latest
 
     steps:
