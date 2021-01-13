@@ -53,7 +53,10 @@ Basic Usage
     sa.event.listen(Event, "load", Event.init_state_machine)
 
     event = Event(name="Event1")
-    event.set_sent()
+
+    assert event.status == NEW
+    assert event.set_sent()
+    assert event.status == SENT
 
 License
 -------
