@@ -3,6 +3,7 @@
 
 [![CI](https://github.com/bigbag/sqlalchemy-state-machine/workflows/CI/badge.svg)](https://github.com/bigbag/sqlalchemy-state-machine/actions?query=workflow%3ACI)
 [![pypi](https://img.shields.io/pypi/v/sqlalchemy-state-machine.svg)](https://pypi.python.org/pypi/sqlalchemy-state-machine)
+[![downloads](https://img.shields.io/pypi/dm/sqlalchemy-state-machine.svg)](https://pypistats.org/packages/sqlalchemy-state-machine)
 [![versions](https://img.shields.io/pypi/pyversions/sqlalchemy-state-machine.svg)](https://github.com/bigbag/sqlalchemy-state-machine)
 [![license](https://img.shields.io/github/license/bigbag/sqlalchemy-state-machine.svg)](https://github.com/bigbag/sqlalchemy-state-machine/blob/master/LICENSE)
 
