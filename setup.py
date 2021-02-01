@@ -9,7 +9,7 @@ version = SourceFileLoader("version", "sqlalchemy_state_machine/version.py").loa
 
 _ROOT = pathlib.Path(__file__).parent
 
-with open(str(_ROOT / "README.rst")) as f:
+with open(str(_ROOT / "README.md")) as f:
     readme = f.read()
 
 CLASSIFIERS = [
@@ -31,7 +31,7 @@ setup(
     license="Apache License, Version 2.0",
     description="Helper for add transitions functionality in sqlalchemy",
     long_description=readme,
-    long_description_content_type="text/x-rst",
+    long_description_content_type="text/markdown",
     author="Pavel Liashkov",
     author_email="pavel.liashkov@protonmail.com",
     maintainer="Pavel Liashkov",
