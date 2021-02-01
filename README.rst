@@ -5,6 +5,8 @@ sqlalchemy-state-machine
    :target: https://github.com/bigbag/sqlalchemy-state-machine/actions?query=workflow%3ACI
 .. image:: https://img.shields.io/pypi/v/sqlalchemy-state-machine.svg
    :target: https://pypi.python.org/pypi/sqlalchemy-state-machine
+.. image:: https://img.shields.io/github/license/bigbag/sqlalchemy-state-machine.svg
+   :target: https://github.com/bigbag/sqlalchemy-state-machine/blob/master/LICENSE
 
 
 **sqlalchemy-state-machine** is a helper for add transitions functionality in sqlalchemy.
