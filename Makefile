@@ -1,12 +1,12 @@
 .PHONY: tag
 tag:
 	@echo "Create tag"
-	@git checkout master; 
-	@git pull origin master; 
+	@git checkout main; 
+	@git pull origin main; 
 	@git fetch;
 	@git tag -a  $(name) -m "$(name)"; 
 	@git push origin $(name);
-	@git push origin master
+	@git push origin main
 
 .PHONY: lint
 lint:
