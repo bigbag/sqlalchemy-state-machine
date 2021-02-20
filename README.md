@@ -2,7 +2,7 @@
 
 
 [![CI](https://github.com/bigbag/sqlalchemy-state-machine/workflows/CI/badge.svg)](https://github.com/bigbag/sqlalchemy-state-machine/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/bigbag/sqlalchemy-state-machine/branch/master/graph/badge.svg?token=GDKSQO7OEX)](https://codecov.io/gh/bigbag/sqlalchemy-state-machine)
+[![codecov](https://codecov.io/gh/bigbag/sqlalchemy-state-machine/branch/main/graph/badge.svg)](https://codecov.io/gh/bigbag/sqlalchemy-state-machine)
 [![pypi](https://img.shields.io/pypi/v/sqlalchemy-state-machine.svg)](https://pypi.python.org/pypi/sqlalchemy-state-machine)
 [![downloads](https://img.shields.io/pypi/dm/sqlalchemy-state-machine.svg)](https://pypistats.org/packages/sqlalchemy-state-machine)
 [![versions](https://img.shields.io/pypi/pyversions/sqlalchemy-state-machine.svg)](https://github.com/bigbag/sqlalchemy-state-machine)
