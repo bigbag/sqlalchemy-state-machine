@@ -21,9 +21,9 @@ jobs:
         pip install --no-cache-dir -e .
         pip install --no-cache-dir -r requirements/linters.txt
         pip install --no-cache-dir -r requirements/tests.txt
-    - name: Lint
+    - name: Check code
       run: |
-        make lint
+        make check
     - name: Test
       run: |
         make test
