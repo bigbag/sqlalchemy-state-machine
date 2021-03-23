@@ -41,7 +41,7 @@ setup(
     platforms=["POSIX"],
     classifiers=CLASSIFIERS,
     python_requires=">=3.7",
-    install_requires=["SQLAlchemy==1.4.0", "transitions==0.8.7"],
+    install_requires=["SQLAlchemy==1.4.2", "transitions==0.8.7"],
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
