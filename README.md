@@ -10,6 +10,7 @@
 
 **sqlalchemy-state-machine** is a helper for add transitions functionality in sqlalchemy.
 
+* [Project Changelog](https://github.com/bigbag/sqlalchemy-state-machine/blob/main/CHANGELOG.md)
 
 ## Installation
 

@@ -48,7 +48,6 @@ coverage.xml
 .hypothesis/
 
 # Translations
-*.mo
 *.pot
 
 # Django stuff:
@@ -64,6 +63,8 @@ target/
 .ipynb_checkpoints
 venv/*
 env/*
+.venv/*
+.env/*
 
 address.txt
 private_keys.txt
