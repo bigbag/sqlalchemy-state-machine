@@ -36,7 +36,7 @@ jobs:
       - run: uv run --locked pytest --cov=sqlalchemy_state_machine --cov-report=term-missing
       - run: uv build
       - run: uv run --locked python -m zipfile -t dist/*.whl
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: package-distributions
           path: dist/
