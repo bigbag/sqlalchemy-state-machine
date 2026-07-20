@@ -508,7 +508,7 @@ wheels = [
 
 [[package]]
 name = "sqlalchemy-state-machine"
-version = "2.0.0"
+version = "2.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "sqlalchemy" },
@@ -523,7 +523,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "sqlalchemy", specifier = ">=2.0.51" }]
+requires-dist = [{ name = "sqlalchemy", specifier = ">=2.0.51,<3.0.0" }]
 
 [package.metadata.requires-dev]
 dev = [

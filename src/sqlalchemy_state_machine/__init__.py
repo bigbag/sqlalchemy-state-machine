@@ -4,7 +4,7 @@ from .exceptions import ConfigurationError, InvalidTransitionError
 from .machine import StateMachine, Transition
 from .mixin import StateMachineMixin
 
-__version__ = "2.0.0"
+__version__ = "2.1.0"
 
 __all__ = [
     "ConfigurationError",
