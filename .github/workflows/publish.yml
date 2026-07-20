@@ -1,0 +1,57 @@
+name: Publish
+
+on:
+  push:
+    tags: ["v*", "[0-9]*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - uses: astral-sh/setup-uv@v7
+      - run: uv sync --all-groups --locked
+      - name: Verify tag matches project version
+        run: |
+          uv run --locked python - <<'PY'
+          import os
+          import tomllib
+
+          with open("pyproject.toml", "rb") as pyproject:
+              version = tomllib.load(pyproject)["project"]["version"]
+
+          tag = os.environ["GITHUB_REF_NAME"]
+          if tag.removeprefix("v") != version:
+              raise SystemExit(
+                  f"Release tag {tag!r} does not match [project].version "
+                  f"{version!r} in pyproject.toml."
+              )
+          PY
+      - run: uv run --locked ruff format --check src tests examples
+      - run: uv run --locked ruff check src tests examples
+      - run: uv run --locked mypy src
+      - run: uv run --locked pytest --cov=sqlalchemy_state_machine --cov-report=term-missing
+      - run: uv build
+      - run: uv run --locked python -m zipfile -t dist/*.whl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: package-distributions
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/sqlalchemy-state-machine
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: package-distributions
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1

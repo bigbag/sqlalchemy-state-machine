@@ -1,4 +1,11 @@
+# Changelog
 
+## 2.0.0 (2026-07-20)
+
+- **Breaking:** Python 3.11+ and SQLAlchemy 2.x rewrite.
+- **Breaking:** Replace the `transitions` integration with explicit `StateMachine`, `Transition`, and `StateMachineMixin` declarations.
+- Add typed validation, callbacks, transition availability inspection, modern packaging, tests, and CI.
+- Remove `StateConfig`, dynamic trigger methods, manual event registration, and legacy Python support.
 
 ## 1.11.0 (2024-10-18)
 

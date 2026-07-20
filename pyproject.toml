@@ -1,18 +1,45 @@
-[tool.black]
+[build-system]
+requires = ["hatchling>=1.31.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sqlalchemy-state-machine"
+version = "2.0.0"
+description = "Explicit, typed state transitions for SQLAlchemy models"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{ name = "Pavel Liashkov", email = "pavel.liashkov@protonmail.com" }]
+keywords = ["sqlalchemy", "state-machine", "workflow", "transitions"]
+classifiers = ["Development Status :: 5 - Production/Stable", "Intended Audience :: Developers", "License :: OSI Approved :: Apache Software License", "Programming Language :: Python :: 3 :: Only", "Programming Language :: Python :: 3.11", "Programming Language :: Python :: 3.12", "Programming Language :: Python :: 3.13", "Programming Language :: Python :: 3.14", "Topic :: Database", "Topic :: Software Development :: Libraries"]
+dependencies = ["sqlalchemy>=2.0.51"]
+
+[dependency-groups]
+dev = ["mypy>=2.3.0", "pytest>=9.1.1", "pytest-cov>=7.1.0", "ruff>=0.15.22"]
+
+[project.urls]
+Changelog = "https://github.com/bigbag/sqlalchemy-state-machine/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/bigbag/sqlalchemy-state-machine"
+Issues = "https://github.com/bigbag/sqlalchemy-state-machine/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sqlalchemy_state_machine"]
+
+[tool.ruff]
 line-length = 100
-target-version = ['py38']
-include = '\.pyi?$'
+target-version = "py311"
 
-[tool.vulture]
-min_confidence = 70
-sort_by_size = true
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
 
-[tool.isort]
-line_length = 100
-multi_line_output = 3
-include_trailing_comma = true
-indent='    '
-sections = ['FUTURE','STDLIB','THIRDPARTY','FIRSTPARTY','LOCALPROJECT','LOCALFOLDER']
-default_section = 'THIRDPARTY'
-known_standard_library = []
-known_localproject = ['sqlalchemy_state_machine','tests']
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_ignores = true
+files = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-config"
