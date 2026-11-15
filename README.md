@@ -4,7 +4,7 @@ Explicit, typed state transitions for SQLAlchemy models.
 
 ## Requirements
 
-- Python 3.11+ (CI validates Python 3.11, 3.12, 3.13, and 3.14)
+- Python 3.11+ (CI validates Python 3.11, 3.12, 3.13, 3.14, and 3.15)
 - SQLAlchemy 2.x
 
 ## Install
