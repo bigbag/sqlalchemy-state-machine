@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.2.0 (2026-11-15)
+
+* Fix reqs [Pavel Liashkov]
+* Bump mypy from 2.3.0 to 2.4.0 [dependabot[bot]]
+* Bump sqlalchemy from 2.0.51 to 2.1.5 [dependabot[bot]]
+* Bump ruff from 0.15.22 to 0.17.4 [dependabot[bot]]
+* Add Python 3.15 support [Pavel Liashkov]
+* Update version [Pavel Liashkov]
+
+## 2.1.0 (2026-07-20)
+
+* Update changelog [Pavel Liashkov]
+* Fix reqs [Pavel Liashkov]
+
 ## 2.0.0 (2026-07-20)
 
 * Update changelog [Pavel Liashkov]
